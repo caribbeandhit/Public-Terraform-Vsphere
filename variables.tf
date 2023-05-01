@@ -20,7 +20,7 @@ variable "datacenter" {
 }
 
 variable "cluster" {
-  default = "Morpheus-RG"
+  default = "Resource / Morpheus-RG"
   type    = string
 }
 
@@ -35,7 +35,7 @@ variable "network_name" {
 }
 
 variable "template_name" {
-  default = "WIN-2019-Template"
+  default = "RHELx-8.4-TTBizLink-Image-NFS-Template"
   type    = string
 }
 
