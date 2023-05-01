@@ -20,7 +20,7 @@ variable "datacenter" {
 }
 
 variable "cluster" {
-  default = "Resources / Morpheus-RG"
+  default = "DC 2 Management Cluster"
   type    = string
 }
 
