@@ -21,7 +21,7 @@ data "vsphere_virtual_machine" "template" {
 # Tag Categories #
 resource "vsphere_tag_category" "tag-environment" {
   name        = "Environment"
-  cardinality = "DEV"
+  cardinality = "SINGLE"
   associable_types = [
     "VirtualMachine"
   ]
