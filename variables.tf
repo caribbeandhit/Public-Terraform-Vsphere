@@ -20,7 +20,7 @@ variable "datacenter" {
 }
 
 variable "cluster" {
-  default = "DC 2 Management Cluster"
+  default = "DC2 Management Cluster"
   type    = string
 }
 
@@ -35,7 +35,7 @@ variable "network_name" {
 }
 
 variable "template_name" {
-  default = "RHELx-8.4-TTBizLink-Image-NFS-Template"
+  default = "MTI_DB_Win2019"
   type    = string
 }
 
