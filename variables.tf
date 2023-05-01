@@ -35,7 +35,7 @@ variable "network_name" {
 }
 
 variable "template_name" {
-  default = "MTI_DB_Win2019"
+  default = "Shared DC 2/MTI_DB_Win2019"
   type    = string
 }
 
