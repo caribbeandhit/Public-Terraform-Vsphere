@@ -1,15 +1,15 @@
 variable "vsphere_server" {
-  default = "vcelab01.lab"
+  default = "is01vcl001.iaas01.local"
   type    = string
 }
 
 variable "vsphere_user" {
-  default = "administrator@vsphere.local"
+  default = "svc_morpheus"
   type    = string
 }
 
 variable "vsphere_password" {
-  default   = "PASSWORD"
+  default   = "m0rph3usP@ssw0rd123"
   type      = string
   sensitive = true
 }
@@ -20,22 +20,22 @@ variable "datacenter" {
 }
 
 variable "cluster" {
-  default = "LAB"
+  default = "Morpheus-RG"
   type    = string
 }
 
 variable "datastore" {
-  default = "datastore1"
+  default = "MGTDS001"
   type    = string
 }
 
 variable "network_name" {
-  default = "VLAN_LAB"
+  default = "IaaS_Management"
   type    = string
 }
 
 variable "template_name" {
-  default = "TEMPLATE-W2019"
+  default = "WIN-2019-Template"
   type    = string
 }
 
