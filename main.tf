@@ -21,16 +21,16 @@ data "vsphere_virtual_machine" "template" {
 # Tag Categories #
 resource "vsphere_tag_category" "tag-environment" {
   name        = "Environment"
-  cardinality = "SINGLE"
+  cardinality = "DEV"
   associable_types = [
     "VirtualMachine"
   ]
 }
 # Tag Environment Variables #
 resource "vsphere_tag" "tag-environment" {
-  name        = "LAB"
+  name        = "DEV"
   category_id = vsphere_tag_category.tag-environment.id
-  description = "LAB TerraForm"
+  description = "DEV TerraForm"
 }
 
 
@@ -42,7 +42,7 @@ resource "vsphere_virtual_machine" "vm" {
   num_cpus         = 4
   memory           = 4096
   guest_id         = data.vsphere_virtual_machine.template.guest_id
-  folder           = "LAB"
+  folder           = "/"
   scsi_type        = data.vsphere_virtual_machine.template.scsi_type
   firmware         = data.vsphere_virtual_machine.template.firmware
 
@@ -101,7 +101,7 @@ resource "vsphere_virtual_machine" "vm" {
 
 
       }
-      ipv4_gateway    = "10.200.43.126"
+      ipv4_gateway    = "10.224.3.125"
       dns_server_list = ["8.8.8.8", "4.4.4.4"]
 
     }
