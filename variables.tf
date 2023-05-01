@@ -15,7 +15,7 @@ variable "vsphere_password" {
 }
 
 variable "datacenter" {
-  default = "Datacenter"
+  default = "Shared DC 2"
   type    = string
 }
 
@@ -25,7 +25,7 @@ variable "cluster" {
 }
 
 variable "datastore" {
-  default = "MGTDS001"
+  default = "PERDS000"
   type    = string
 }
 
