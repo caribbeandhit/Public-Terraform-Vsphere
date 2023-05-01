@@ -18,20 +18,7 @@ data "vsphere_virtual_machine" "template" {
   datacenter_id = data.vsphere_datacenter.datacenter.id
 }
 
-# Tag Categories #
-resource "vsphere_tag_category" "tag-environment" {
-  name        = "Environment"
-  cardinality = "SINGLE"
-  associable_types = [
-    "VirtualMachine"
-  ]
-}
-# Tag Environment Variables #
-resource "vsphere_tag" "tag-environment" {
-  name        = "DEV"
-  category_id = vsphere_tag_category.tag-environment.id
-  description = "DEV TerraForm"
-}
+
 
 
 resource "vsphere_virtual_machine" "vm" {
@@ -106,9 +93,7 @@ resource "vsphere_virtual_machine" "vm" {
 
     }
   }
-  tags = [
-    "${vsphere_tag.tag-environment.id}"
-  ]
+
 
 }
 
