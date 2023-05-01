@@ -40,7 +40,8 @@ variable "template_name" {
 }
 
 variable "VM_Name" {
-  description = "VM NAME?"
+  default = "Terraform_VM_Test"
+  type    = string
 
 }
 variable "vm_count" {
