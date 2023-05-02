@@ -23,7 +23,7 @@ data "vsphere_virtual_machine" "template" {
 
 resource "vsphere_virtual_machine" "vm" {
   count            = var.vm_count
-  name             = var.VM_Name
+  name             = var.VM_Name[count.index + 1]
   resource_pool_id = data.vsphere_compute_cluster.cluster.resource_pool_id
   datastore_id     = data.vsphere_datastore.datastore.id
   num_cpus         = 4
@@ -75,7 +75,7 @@ resource "vsphere_virtual_machine" "vm" {
 
       windows_options {
 
-        computer_name  = var.VM_Name
+        computer_name  = var.VM_Name[count.index + 1]
         workgroup      = "Terraform"
         admin_password = "Str0ngP@ssw0rd!"
 
