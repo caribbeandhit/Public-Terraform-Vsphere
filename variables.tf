@@ -40,7 +40,7 @@ variable "template_name" {
 }
 
 variable "VM_Name" {
-  default = "Terraform_VM_Test"
+  default = "Terraform-VM"
   type    = string
 
 }
