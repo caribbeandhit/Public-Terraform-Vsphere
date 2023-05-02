@@ -35,7 +35,7 @@ variable "network_name" {
 }
 
 variable "template_name" {
-  default = "WIN-2019-Template"
+  default = "Windows2019STD_Template"
   type    = string
 }
 
