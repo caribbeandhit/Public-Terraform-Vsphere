@@ -35,7 +35,7 @@ variable "network_name" {
 }
 
 variable "template_name" {
-  default = "MTI_DB_Win2019"
+  default = "WIN-2019-Template"
   type    = string
 }
 
